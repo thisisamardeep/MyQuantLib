@@ -15,6 +15,7 @@ set(QUANTLIB_VERSION ${QUANTLIB_VERSION_MAJOR}.${QUANTLIB_VERSION_MINOR}.${QUANT
 
 option(QL_BUILD_EXAMPLES "Build examples" ON)
 
+add_subdirectory(ql)
 if (QL_BUILD_EXAMPLES)
     add_subdirectory(Examples)
 endif()
