@@ -12,10 +12,25 @@ set(QUANTLIB_VERSION_MINOR 34)
 set(QUANTLIB_VERSION_PATCH 0)
 set(QUANTLIB_VERSION ${QUANTLIB_VERSION_MAJOR}.${QUANTLIB_VERSION_MINOR}.${QUANTLIB_VERSION_PATCH})
 set(PACKAGE_NAME          "MyQuantLib")
+set(PACKAGE_VERSION       "${QUANTLIB_VERSION}-dev")
+set(PACKAGE_VERSION_HEX   "0x01340000")
+set(PACKAGE_STRING        "${PACKAGE_NAME} ${PACKAGE_VERSION}")
+set(PACKAGE_TARNAME       "${PACKAGE_NAME}-${PACKAGE_VERSION}")
+set(PACKAGE_BUGREPORT     "https://github.com/lballabio/QuantLib/issues/")
+
 
 project(${PACKAGE_NAME} LANGUAGES CXX DESCRIPTION "The QuantLib C++ Library")
 
 option(QL_BUILD_EXAMPLES "Build examples" ON)
+
+
+
+set(QL_HAVE_CONFIG_H ON)
+set(QL_VERSION ${PACKAGE_VERSION})
+set(QL_HEX_VERSION ${PACKAGE_VERSION_HEX})
+configure_file(ql/config.hpp.cfg ql/config.hpp @ONLY)
+
+
 
 add_subdirectory(ql)
 if (QL_BUILD_EXAMPLES)
