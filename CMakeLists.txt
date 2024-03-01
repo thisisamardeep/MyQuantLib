@@ -19,7 +19,27 @@ set(PACKAGE_TARNAME       "${PACKAGE_NAME}-${PACKAGE_VERSION}")
 set(PACKAGE_BUGREPORT     "https://github.com/lballabio/QuantLib/issues/")
 
 
+# Default build type for single-config generators (set this before project() command)
+# For multi-config generators, such as Visual Studio, use: cmake --build . --config=<CONFIG>
+if (NOT CMAKE_BUILD_TYPE OR CMAKE_BUILD_TYPE STREQUAL "")
+    set(CMAKE_BUILD_TYPE "Release" CACHE
+            STRING "Build type for single-config generators" FORCE)
+endif()
+
+
 project(${PACKAGE_NAME} LANGUAGES CXX DESCRIPTION "The QuantLib C++ Library")
+
+
+
+
+
+
+
+
+
+
+
+
 
 option(QL_BUILD_EXAMPLES "Build examples" ON)
 
