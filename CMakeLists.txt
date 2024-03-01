@@ -29,6 +29,17 @@ endif()
 
 project(${PACKAGE_NAME} LANGUAGES CXX DESCRIPTION "The QuantLib C++ Library")
 
+# Path for package-local cmake modules
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+
+# Installation directories
+set(QL_INSTALL_BINDIR "bin" CACHE STRING "Installation directory for executables")
+set(QL_INSTALL_LIBDIR "lib" CACHE STRING "Installation directory for libraries")
+set(QL_INSTALL_INCLUDEDIR "include" CACHE STRING "Installation directory for headers")
+set(QL_INSTALL_EXAMPLESDIR "lib/QuantLib/examples" CACHE STRING
+        "Installation directory for examples")
+set(QL_INSTALL_CMAKEDIR "lib/cmake/${PACKAGE_NAME}" CACHE STRING
+        "Installation directory for CMake scripts")
 
 
 
@@ -36,12 +47,38 @@ project(${PACKAGE_NAME} LANGUAGES CXX DESCRIPTION "The QuantLib C++ Library")
 
 
 
-
-
-
-
-
+option(QL_BUILD_BENCHMARK "Build benchmark" OFF)
 option(QL_BUILD_EXAMPLES "Build examples" ON)
+option(QL_BUILD_TEST_SUITE "Build test suite" ON)
+option(QL_BUILD_FUZZ_TEST_SUITE "Build fuzz test suite" OFF)
+option(QL_ENABLE_OPENMP "Detect and use OpenMP" OFF)
+option(QL_ENABLE_PARALLEL_UNIT_TEST_RUNNER "Enable the parallel unit test runner" OFF)
+option(QL_ENABLE_SESSIONS "Singletons return different instances for different sessions" OFF)
+option(QL_ENABLE_THREAD_SAFE_OBSERVER_PATTERN "Enable the thread-safe observer pattern" OFF)
+option(QL_ENABLE_TRACING "Tracing messages should be allowed" OFF)
+option(QL_ENABLE_DEFAULT_WARNING_LEVEL "Enable the default warning level to pass the ci pipeline" ON)
+option(QL_COMPILE_WARNING_AS_ERROR "Specify whether to treat warnings on compile as errors." OFF)
+option(QL_ERROR_FUNCTIONS "Error messages should include current function information" OFF)
+option(QL_ERROR_LINES "Error messages should include file and line information" OFF)
+option(QL_EXTRA_SAFETY_CHECKS "Extra safety checks should be performed" OFF)
+option(QL_HIGH_RESOLUTION_DATE "Enable date resolution down to microseconds" OFF)
+option(QL_THROW_IN_CYCLES "Throw an exception when a notification loop is detected" OFF)
+option(QL_FASTER_LAZY_OBJECTS "Cause lazy objects to forward just the first notification instead of every one" ON)
+option(QL_NULL_AS_FUNCTIONS "Enable the implementation of Null as template functions" OFF)
+option(QL_INSTALL_BENCHMARK "Install benchmark" ON)
+option(QL_INSTALL_EXAMPLES "Install examples" ON)
+option(QL_INSTALL_TEST_SUITE "Install test suite" ON)
+option(QL_TAGGED_LAYOUT "Library names use layout tags" ${MSVC})
+option(QL_USE_CLANG_TIDY "Use clang-tidy when building" OFF)
+option(QL_USE_INDEXED_COUPON "Use indexed coupons instead of par coupons" OFF)
+option(QL_USE_STD_ANY "Use std::any instead of boost::any" ON)
+option(QL_USE_STD_CLASSES "Enable all QL_USE_STD_ options" ON)
+option(QL_USE_STD_FUNCTION "Use std::function and std::bind instead of Boost ones" ON)
+option(QL_USE_STD_OPTIONAL "Use std::optional instead of boost::optional" ON)
+option(QL_USE_STD_SHARED_PTR "Use standard smart pointers instead of Boost ones" ON)
+option(QL_USE_STD_TUPLE "Use std::tuple instead of boost::tuple" ON)
+set(QL_EXTERNAL_SUBDIRECTORIES "" CACHE STRING "Optional list of external source directories to be added to the build (semicolon-separated)")
+set(QL_EXTRA_LINK_LIBRARIES "" CACHE STRING "Optional extra link libraries to add to QuantLib")
 
 
 
