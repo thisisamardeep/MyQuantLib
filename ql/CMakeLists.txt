@@ -9,3 +9,6 @@ set(QL_HEADERS
 set(QL_CONFIGURED_HEADERS
     ${PROJECT_BINARY_DIR}/ql/config.hpp
     ${PROJECT_BINARY_DIR}/ql/qldefines.hpp)
+
+
+set(QL_GENERATED_HEADERS "")

@@ -9,7 +9,7 @@
  */
 
 
-//#include <ql/instruments/vanillaswap.hpp>
+#include <ql/instruments/vanillaswap.hpp>
 
 
 int main(int, char* []) {
