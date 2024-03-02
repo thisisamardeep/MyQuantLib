@@ -86,6 +86,7 @@ set(QL_HAVE_CONFIG_H ON)
 set(QL_VERSION ${PACKAGE_VERSION})
 set(QL_HEX_VERSION ${PACKAGE_VERSION_HEX})
 configure_file(ql/config.hpp.cfg ql/config.hpp @ONLY)
+configure_file(ql/qldefines.hpp.cfg ql/qldefines.hpp @ONLY)
 
 
 

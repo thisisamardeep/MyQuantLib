@@ -8,6 +8,10 @@
   Damiano Brigo and Massimo Masetti; May 4, 2005
  */
 
+
+//#include <ql/instruments/vanillaswap.hpp>
+
+
 int main(int, char* []) {
 
     int t=67;
