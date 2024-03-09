@@ -88,9 +88,25 @@ set(QL_HEX_VERSION ${PACKAGE_VERSION_HEX})
 configure_file(ql/config.hpp.cfg ql/config.hpp @ONLY)
 configure_file(ql/qldefines.hpp.cfg ql/qldefines.hpp @ONLY)
 
+function(getAllSubdirs dir dirs)
+    # get subdirectories for dir
+    get_property(subdirs DIRECTORY ${dir} PROPERTY SUBDIRECTORIES)
+    # iterate any found subdirectories
+    foreach(subdir ${subdirs})
+        # append each sub directory
+        list(APPEND ${dirs} "\n" ${subdir})
+        getAllSubdirs(${subdir} ${dirs})
+    endforeach()
+    set(${dirs} ${${dirs}} PARENT_SCOPE)
+endfunction()
+
 
 
 add_subdirectory(ql)
-if (QL_BUILD_EXAMPLES)
-    add_subdirectory(Examples)
-endif()
+#if (QL_BUILD_EXAMPLES)
+#    add_subdirectory(Examples)
+#endif()
+
+set(Project_Directories ${CMAKE_SOURCE_DIR})
+getAllSubDirs(. Project_Directories)
+message("all dirs " ${Project_Directories})

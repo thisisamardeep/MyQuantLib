@@ -1,0 +1,75 @@
+all dirs /home/amardeep/Desktop/contribute/QuantLib
+/home/amardeep/Desktop/contribute/QuantLib/ql
+/home/amardeep/Desktop/contribute/QuantLib/Examples
+/home/amardeep/Desktop/contribute/QuantLib/Examples/BasketLosses
+/home/amardeep/Desktop/contribute/QuantLib/Examples/BermudanSwaption
+/home/amardeep/Desktop/contribute/QuantLib/Examples/Bonds
+/home/amardeep/Desktop/contribute/QuantLib/Examples/CallableBonds
+/home/amardeep/Desktop/contribute/QuantLib/Examples/CDS
+/home/amardeep/Desktop/contribute/QuantLib/Examples/ConvertibleBonds
+/home/amardeep/Desktop/contribute/QuantLib/Examples/CVAIRS
+/home/amardeep/Desktop/contribute/QuantLib/Examples/DiscreteHedging
+/home/amardeep/Desktop/contribute/QuantLib/Examples/EquityOption
+/home/amardeep/Desktop/contribute/QuantLib/Examples/FittedBondCurve
+/home/amardeep/Desktop/contribute/QuantLib/Examples/FRA
+/home/amardeep/Desktop/contribute/QuantLib/Examples/Gaussian1dModels
+/home/amardeep/Desktop/contribute/QuantLib/Examples/GlobalOptimizer
+/home/amardeep/Desktop/contribute/QuantLib/Examples/LatentModel
+/home/amardeep/Desktop/contribute/QuantLib/Examples/MarketModels
+/home/amardeep/Desktop/contribute/QuantLib/Examples/MultidimIntegral
+/home/amardeep/Desktop/contribute/QuantLib/Examples/MulticurveBootstrapping
+/home/amardeep/Desktop/contribute/QuantLib/Examples/Replication
+/home/amardeep/Desktop/contribute/QuantLib/Examples/Repo
+/home/amardeep/Desktop/contribute/QuantLib/test-suite
+-- Target: Experimental
+-- Target: Nightly
+-- Target: Continuous
+-- Target: NightlyMemoryCheck
+-- Target: NightlyStart
+-- Target: NightlyUpdate
+-- Target: NightlyConfigure
+-- Target: NightlyBuild
+-- Target: NightlyTest
+-- Target: NightlyCoverage
+-- Target: NightlyMemCheck
+-- Target: NightlySubmit
+-- Target: ExperimentalStart
+-- Target: ExperimentalUpdate
+-- Target: ExperimentalConfigure
+-- Target: ExperimentalBuild
+-- Target: ExperimentalTest
+-- Target: ExperimentalCoverage
+-- Target: ExperimentalMemCheck
+-- Target: ExperimentalSubmit
+-- Target: ContinuousStart
+-- Target: ContinuousUpdate
+-- Target: ContinuousConfigure
+-- Target: ContinuousBuild
+-- Target: ContinuousTest
+-- Target: ContinuousCoverage
+-- Target: ContinuousMemCheck
+-- Target: ContinuousSubmit
+-- Target: ql_library
+-- Target: BasketLosses
+-- Target: BermudanSwaption
+-- Target: Bonds
+-- Target: CallableBonds
+-- Target: CDS
+-- Target: ConvertibleBonds
+-- Target: CVAIRS
+-- Target: DiscreteHedging
+-- Target: EquityOption
+-- Target: FittedBondCurve
+-- Target: FRA
+-- Target: Gaussian1dModels
+-- Target: GlobalOptimizer
+-- Target: LatentModel
+-- Target: MarketModels
+-- Target: MultidimIntegral
+-- Target: MulticurveBootstrapping
+-- Target: Replication
+-- Target: Repo
+-- Target: ql_test_suite
+-- Configuring done (0.1s)
+-- Generating done (0.2s)
+-- Build files have been written to: /home/amardeep/Desktop/contribute/QuantLib/cmake-build-debug
