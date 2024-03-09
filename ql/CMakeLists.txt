@@ -12,3 +12,6 @@ set(QL_CONFIGURED_HEADERS
 
 
 set(QL_GENERATED_HEADERS "")
+
+
+add_library(ql_library ${QL_SOURCES} ${QL_HEADERS})

@@ -21,34 +21,8 @@ all dirs /home/amardeep/Desktop/contribute/QuantLib
 /home/amardeep/Desktop/contribute/QuantLib/Examples/Replication
 /home/amardeep/Desktop/contribute/QuantLib/Examples/Repo
 /home/amardeep/Desktop/contribute/QuantLib/test-suite
--- Target: Experimental
--- Target: Nightly
--- Target: Continuous
--- Target: NightlyMemoryCheck
--- Target: NightlyStart
--- Target: NightlyUpdate
--- Target: NightlyConfigure
--- Target: NightlyBuild
--- Target: NightlyTest
--- Target: NightlyCoverage
--- Target: NightlyMemCheck
--- Target: NightlySubmit
--- Target: ExperimentalStart
--- Target: ExperimentalUpdate
--- Target: ExperimentalConfigure
--- Target: ExperimentalBuild
--- Target: ExperimentalTest
--- Target: ExperimentalCoverage
--- Target: ExperimentalMemCheck
--- Target: ExperimentalSubmit
--- Target: ContinuousStart
--- Target: ContinuousUpdate
--- Target: ContinuousConfigure
--- Target: ContinuousBuild
--- Target: ContinuousTest
--- Target: ContinuousCoverage
--- Target: ContinuousMemCheck
--- Target: ContinuousSubmit
+
+
 -- Target: ql_library
 -- Target: BasketLosses
 -- Target: BermudanSwaption

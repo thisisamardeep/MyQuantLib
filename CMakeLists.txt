@@ -114,3 +114,18 @@ endif()
 set(Project_Directories ${CMAKE_SOURCE_DIR})
 getAllSubDirs(. Project_Directories)
 message("all dirs " ${Project_Directories})
+
+function(print_all_targets DIR)
+    get_property(TGTS DIRECTORY "${DIR}" PROPERTY BUILDSYSTEM_TARGETS)
+    foreach(TGT IN LISTS TGTS)
+        message(STATUS "Target: ${TGT}")
+        # TODO: Do something about it
+    endforeach()
+
+    get_property(SUBDIRS DIRECTORY "${DIR}" PROPERTY SUBDIRECTORIES)
+    foreach(SUBDIR IN LISTS SUBDIRS)
+        print_all_targets("${SUBDIR}")
+    endforeach()
+endfunction()
+
+print_all_targets(.)
