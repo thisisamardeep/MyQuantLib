@@ -1,0 +1,1 @@
+add_executable(Gaussian1dModels Gaussian1dModels.cpp)
