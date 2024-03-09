@@ -103,9 +103,9 @@ endfunction()
 
 
 add_subdirectory(ql)
-#if (QL_BUILD_EXAMPLES)
-#    add_subdirectory(Examples)
-#endif()
+if (QL_BUILD_EXAMPLES)
+    add_subdirectory(Examples)
+endif()
 
 set(Project_Directories ${CMAKE_SOURCE_DIR})
 getAllSubDirs(. Project_Directories)

@@ -1,1 +1,1 @@
-add_subdirectory(CVAIRS)
+add_subdirectory(BasketLosses)
