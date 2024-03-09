@@ -107,6 +107,10 @@ if (QL_BUILD_EXAMPLES)
     add_subdirectory(Examples)
 endif()
 
+if (QL_BUILD_TEST_SUITE OR QL_BUILD_BENCHMARK)
+    add_subdirectory(test-suite)
+endif()
+
 set(Project_Directories ${CMAKE_SOURCE_DIR})
 getAllSubDirs(. Project_Directories)
 message("all dirs " ${Project_Directories})
