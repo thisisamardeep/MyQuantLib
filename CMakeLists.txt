@@ -115,6 +115,14 @@ if (QL_BUILD_TEST_SUITE OR QL_BUILD_BENCHMARK)
     add_subdirectory(test-suite)
 endif()
 
+if ('${CMAKE_CXX_COMPILER_ID}' MATCHES 'Clang' AND  QL_BUILD_FUZZ_TEST_SUITE)
+    add_subdirectory(fuzz-test-suite)
+endif()
+
+
+
+
+
 
 set(Project_Directories ${CMAKE_SOURCE_DIR})
 getAllSubDirs(. Project_Directories)
