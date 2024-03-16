@@ -17,8 +17,10 @@
 int main(int, char *[]) {
 
     try {
+        std::cout << std::endl;
+        QuantLib::Calendar calendar = TARGET();
 
-    } catch (std::exception& e) {
+    } catch (std::exception &e) {
 
     }
 
