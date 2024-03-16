@@ -8,12 +8,23 @@
   Damiano Brigo and Massimo Masetti; May 4, 2005
  */
 
+#include "iostream"
+#include <iomanip>
 
 #include <ql/instruments/vanillaswap.hpp>
 
 
-int main(int, char* []) {
+int main(int, char *[]) {
 
-    int t=67;
+    try {
+
+    } catch (std::exception& e) {
+
+    }
+
+
+    catch (...) {
+
+    }
 }
 
