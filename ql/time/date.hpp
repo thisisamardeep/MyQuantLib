@@ -1,7 +1,12 @@
 #ifndef quantlib_date_hpp
 #define quantlib_date_hpp
 
+
+
 namespace QuantLib {
+
+
+    typedef Integer Day;
 
 
     class Date {

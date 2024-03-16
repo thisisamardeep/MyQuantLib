@@ -8,6 +8,9 @@
   Damiano Brigo and Massimo Masetti; May 4, 2005
  */
 
+
+#include <ql/qldefines.hpp>
+
 #include "iostream"
 #include <iomanip>
 
