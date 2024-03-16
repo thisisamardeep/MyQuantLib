@@ -15,3 +15,5 @@ set(QL_GENERATED_HEADERS "")
 
 
 add_library(ql_library ${QL_SOURCES} ${QL_HEADERS})
+
+target_include_directories(ql_library PUBLIC "")

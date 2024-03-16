@@ -48,8 +48,8 @@ set(QL_INSTALL_CMAKEDIR "lib/cmake/${PACKAGE_NAME}" CACHE STRING
 
 
 option(QL_BUILD_BENCHMARK "Build benchmark" OFF)
-option(QL_BUILD_EXAMPLES "Build examples" ON)
-option(QL_BUILD_TEST_SUITE "Build test suite" ON)
+option(QL_BUILD_EXAMPLES "Build examples" OFF)
+option(QL_BUILD_TEST_SUITE "Build test suite" OFF)
 option(QL_BUILD_FUZZ_TEST_SUITE "Build fuzz test suite" OFF)
 option(QL_ENABLE_OPENMP "Detect and use OpenMP" OFF)
 option(QL_ENABLE_PARALLEL_UNIT_TEST_RUNNER "Enable the parallel unit test runner" OFF)
@@ -107,9 +107,14 @@ if (QL_BUILD_EXAMPLES)
     add_subdirectory(Examples)
 endif()
 
+
+if (QL_BUILD_EXAMPLES)
+    add_subdirectory(Examples)
+endif()
 if (QL_BUILD_TEST_SUITE OR QL_BUILD_BENCHMARK)
     add_subdirectory(test-suite)
 endif()
+
 
 set(Project_Directories ${CMAKE_SOURCE_DIR})
 getAllSubDirs(. Project_Directories)
