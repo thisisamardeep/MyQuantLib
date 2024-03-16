@@ -48,7 +48,7 @@ set(QL_INSTALL_CMAKEDIR "lib/cmake/${PACKAGE_NAME}" CACHE STRING
 
 
 option(QL_BUILD_BENCHMARK "Build benchmark" OFF)
-option(QL_BUILD_EXAMPLES "Build examples" OFF)
+option(QL_BUILD_EXAMPLES "Build examples" ON)
 option(QL_BUILD_TEST_SUITE "Build test suite" OFF)
 option(QL_BUILD_FUZZ_TEST_SUITE "Build fuzz test suite" OFF)
 option(QL_ENABLE_OPENMP "Detect and use OpenMP" OFF)
@@ -108,9 +108,7 @@ if (QL_BUILD_EXAMPLES)
 endif()
 
 
-if (QL_BUILD_EXAMPLES)
-    add_subdirectory(Examples)
-endif()
+
 if (QL_BUILD_TEST_SUITE OR QL_BUILD_BENCHMARK)
     add_subdirectory(test-suite)
 endif()
@@ -119,7 +117,9 @@ if ('${CMAKE_CXX_COMPILER_ID}' MATCHES 'Clang' AND  QL_BUILD_FUZZ_TEST_SUITE)
     add_subdirectory(fuzz-test-suite)
 endif()
 
+SET(BOOSTROOT /home/amardeep/Desktop/mysoftwares/myboost/mylibdir)
 
+find_package(Boost ${QL_BOOST_VERSION} REQUIRED)
 
 
 
