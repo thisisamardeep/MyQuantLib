@@ -12,13 +12,14 @@
 #include <iomanip>
 
 #include <ql/instruments/vanillaswap.hpp>
+#include <ql/time/calendars/target.hpp>
 
 
 int main(int, char *[]) {
 
     try {
         std::cout << std::endl;
-        QuantLib::Calendar calendar = TARGET();
+        QuantLib::Calendar calendar = QuantLib::TARGET();
 
     } catch (std::exception &e) {
 
